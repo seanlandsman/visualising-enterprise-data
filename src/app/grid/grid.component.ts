@@ -26,12 +26,8 @@ export class GridComponent implements OnInit {
   getAutoGrouColumnDef(): any {
     return {
       field: 'athlete',
-      width: 200,
-      cellRenderer: 'agGroupCellRenderer',
-      cellRendererParams: {
-        footerValueGetter: '"Total (" + x + ")"',
-        padding: 5
-      }
+      width: 180,
+      cellRenderer: 'agGroupCellRenderer'
     };
   }
 
@@ -39,45 +35,29 @@ export class GridComponent implements OnInit {
     return [
       {
         field: 'gold',
-        width: 100,
-        aggFunc: 'sum',
-        enableValue: true,
-        allowedAggFuncs: ['sum', 'min', 'max']
+        width: 75
       },
       {
         field: 'silver',
-        width: 100,
-        aggFunc: 'min',
-        enableValue: true
+        width: 75
       },
       {
         field: 'bronze',
-        width: 100,
-        aggFunc: 'max',
-        enableValue: true
+        width: 90
       },
       {
         field: 'total',
-        width: 100,
-        aggFunc: 'avg',
-        enableValue: true
-      },
-      {
-        field: 'age',
-        width: 90
+        width: 75
       },
       {
         field: 'country',
-        width: 120,
-        rowGroup: true
+        width: 100,
+        rowGroup: true,
+        hide: true
       },
       {
         field: 'year',
-        width: 90
-      },
-      {
-        field: 'date',
-        width: 110
+        width: 70
       },
       {
         field: 'sport',
