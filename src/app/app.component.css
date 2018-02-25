@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.container > div {
+  flex: 1;
+}
+
+.container mat-card {
+  height: 70%;
+}
+
+#grid, #chart {
+  width: 45%;
+  height: 100%;
+}
+
+#grid {
+  margin-right: 1px;
+}
