@@ -1,12 +1,12 @@
 <div class="container">
   <div id="grid">
     <mat-card>
-      <app-grid></app-grid>
+      <app-grid (chartChanged)="chartChanged($event)"></app-grid>
     </mat-card>
   </div>
   <div id="chart">
     <mat-card>
-      Chart will go here
+      <app-chart-manager [chartComponent]="currentChartComponent"></app-chart-manager>
     </mat-card>
   </div>
 </div>

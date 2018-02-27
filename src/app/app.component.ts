@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {BarChartByTotalMedalsComponent} from './charts/bar-chart/bar-chart-by-total-medals/bar-chart-by-total-medals.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  currentChartComponent: any = BarChartByTotalMedalsComponent;
+
+  chartChanged(newChartComponent: any) {
+    this.currentChartComponent = newChartComponent;
+  }
 }

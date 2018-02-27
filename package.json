@@ -24,7 +24,10 @@
     "ag-grid-angular": "^16.0.0",
     "ag-grid-enterprise": "^16.0.1",
     "core-js": "^2.4.1",
+    "d3": "^4.13.0",
+    "d3-selection-multi": "^1.0.1",
     "rxjs": "^5.5.6",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
@@ -34,6 +37,7 @@
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
+    "@types/underscore": "^1.8.7",
     "codelyzer": "^4.0.1",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",

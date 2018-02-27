@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
   height: 100%;
   width: 100%;
 }
@@ -10,7 +10,7 @@
 }
 
 .container mat-card {
-  height: 70%;
+  height: 90%;
 }
 
 #grid, #chart {
@@ -21,3 +21,4 @@
 #grid {
   margin-right: 1px;
 }
+
