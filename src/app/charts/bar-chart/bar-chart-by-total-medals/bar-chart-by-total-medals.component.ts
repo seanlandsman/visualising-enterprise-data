@@ -7,8 +7,7 @@ import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-bar-chart-by-total-medals',
-  templateUrl: './bar-chart-by-total-medals.component.html',
-  styleUrls: ['./bar-chart-by-total-medals.component.css']
+  template: ''   // no template - D3 will do it for us
 })
 export class BarChartByTotalMedalsComponent extends BaseD3ChartComponent implements OnInit, OnDestroy {
   private barPadding = 5;
@@ -35,7 +34,7 @@ export class BarChartByTotalMedalsComponent extends BaseD3ChartComponent impleme
 
   render() {
     this.svg.selectAll('*').remove();
-    if (this.summarisedOlympicRecords) {
+    if (this.summarisedOlympicRecords && this.summarisedOlympicRecords.length > 0) {
       // create the xScale based on countries
       const xScale = D3.scaleBand()
         .domain(this.summarisedOlympicRecords.map((summarisedOlympicRecord: SummarisedOlympicRecord) => {

@@ -136,6 +136,13 @@ export class GridComponent implements OnInit {
     this.chartChanged.emit(BarChartByTotalMedalsComponent);
   }
 
+  selectTopTenByCountriesAthlete() {
+    this.sortByGroupedColumn();
+    this.selectTopTenGroupedRowsByTotalMedalsWon();
+
+    this.chartChanged.emit(StackedBarChartByCountryAthleteComponent);
+  }
+
   private selectTopTenGroupedRowsByTotalMedalsWon() {
     const groupedNodes: RowNode[] = [];
     this.api.forEachNode((node) => {
@@ -154,9 +161,5 @@ export class GridComponent implements OnInit {
       {colId: 'ag-Grid-AutoColumn', sort: 'desc'}
     ];
     this.api.setSortModel(sort);
-  }
-
-  selectTopTenByCountriesAthlete() {
-    this.chartChanged.emit(StackedBarChartByCountryAthleteComponent);
   }
 }

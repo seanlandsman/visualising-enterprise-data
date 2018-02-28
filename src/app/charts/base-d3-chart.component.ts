@@ -9,14 +9,14 @@ export class BaseD3ChartComponent {
   protected host;
 
   protected margin = {
-    top: 55,
+    top: 25,
     right: 100,
-    bottom: 80,
+    bottom: 85,
     left: 0
   };
 
   protected padding = 40;
-  protected colourScale = D3.scaleOrdinal(D3.schemeCategory10);
+  protected colourScale: any = D3.scaleOrdinal(D3.schemeCategory10);
 
   constructor(_element: ElementRef) {
     this.host = D3.select(_element.nativeElement);
@@ -33,6 +33,7 @@ export class BaseD3ChartComponent {
     this.svg = this.host.append('svg')
       .attr('width', this.width)
       .attr('height', this.height)
+      .style('padding-top', this.padding - 10)
       .style('padding-left', this.padding)
       .style('padding-bottom', this.padding);
   }

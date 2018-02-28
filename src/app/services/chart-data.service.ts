@@ -1,14 +1,12 @@
-import {EventEmitter, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {SummarisedOlympicRecord} from '../model/SummarisedOlympicRecord';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class ChartDataService {
-  chartDataChanged = new EventEmitter<SummarisedOlympicRecord[]>();
-
-  private summarisedOlympicRecords: SummarisedOlympicRecord[] = [];
+  chartDataChanged = new BehaviorSubject<SummarisedOlympicRecord[]>([]);
 
   setChartData(summarisedOlympicRecords: SummarisedOlympicRecord[]) {
-    this.summarisedOlympicRecords = summarisedOlympicRecords;
-    this.chartDataChanged.emit(this.summarisedOlympicRecords.slice());
+    this.chartDataChanged.next(summarisedOlympicRecords.slice());
   }
 }
