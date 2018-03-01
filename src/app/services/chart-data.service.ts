@@ -6,7 +6,7 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 export class ChartDataService {
   chartDataChanged = new BehaviorSubject<SummarisedOlympicRecord[]>([]);
 
-  setChartData(summarisedOlympicRecords: SummarisedOlympicRecord[]) {
+  setBarChartData(summarisedOlympicRecords: SummarisedOlympicRecord[]) {
     this.chartDataChanged.next(summarisedOlympicRecords.slice());
   }
 }

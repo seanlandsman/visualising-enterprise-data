@@ -9,7 +9,7 @@ import {ChartDataService} from '../../../services/chart-data.service';
   selector: 'app-stacked-bar-chart-by-country-athlete',
   template: ''   // no template - D3 will do it for us
 })
-export class StackedBarChartByCountryAthleteComponent extends BaseD3ChartComponent implements OnInit {
+export class StackedBarChartByCountryMedalTypeComponent extends BaseD3ChartComponent implements OnInit {
   private summarisedOlympicRecords: SummarisedOlympicRecord[] = [];
 
   private chartDataChangedSubscription: Subscription;

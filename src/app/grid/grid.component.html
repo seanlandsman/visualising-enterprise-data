@@ -1,5 +1,8 @@
-<input type="button" (click)="selectTopTenCountries()" value="Select Top 10 Countries by Total Medals Won">
-<input type="button" (click)="selectTopTenByCountriesAthlete()" value="Select Top 10 Countries By Athletes">
+<div class="button-row">
+  <button mat-button color="primary" (click)="selectTopTenCountries()">Top 10 Countries by Total Medals Won</button>
+  <button mat-button color="primary" (click)="selectTopTenByCountriesAthlete()">Top 10 Countries By Athletes</button>
+  <button mat-button color="primary" (click)="selectTopTenBySport('Athletics')">Top 10 For Athletics</button>
+</div>
 
 <ag-grid-angular style="width: 100%; height: 90%;" class="ag-theme-fresh"
                  [rowData]="rowData"
@@ -11,6 +14,7 @@
                  rowSelection="multiple"
 
                  enableSorting
+                 enableFilter
                  toolPanelSuppressPivots
                  toolPanelSuppressPivotMode
 
