@@ -73,7 +73,7 @@ export class GridComponent implements OnInit {
     this.selectEventsObserver = this.selectionEventSubject.pipe(debounce(() => timer(20)));
     this.selectEventsObserver.subscribe(rowNodes => {
       this.setBarChartData(rowNodes);
-    );
+    });
   }
 
   private setBarChartData(rowNodes) {
